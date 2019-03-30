@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="QR_Code_Generation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bdJ-uC-0t9">
+                                <rect key="frame" x="57" y="344" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="4z8-Ww-aPI"/>
+                                    <constraint firstAttribute="height" constant="300" id="cP7-bx-6rJ"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CU0-tV-vVw">
+                                <rect key="frame" x="20" y="194" width="374" height="50"/>
+                                <color key="backgroundColor" red="0.09479183703660965" green="0.60991877317428589" blue="0.099086962640285492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="GcR-OS-BB0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="QR Code Generate">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="qrCodeButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ECf-lA-574"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IwR-Sl-rgo">
+                                <rect key="frame" x="20" y="104" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="tPp-4r-eoQ"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="IwR-Sl-rgo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="6GT-hS-aCN"/>
+                            <constraint firstItem="bdJ-uC-0t9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8bm-dJ-WPz"/>
+                            <constraint firstItem="CU0-tV-vVw" firstAttribute="top" secondItem="IwR-Sl-rgo" secondAttribute="bottom" constant="50" id="V5c-ON-5Wl"/>
+                            <constraint firstItem="CU0-tV-vVw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="XuS-0Y-Uj7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IwR-Sl-rgo" secondAttribute="trailing" constant="20" id="bDI-lF-wIn"/>
+                            <constraint firstItem="IwR-Sl-rgo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="iUy-fY-7YK"/>
+                            <constraint firstItem="bdJ-uC-0t9" firstAttribute="top" secondItem="CU0-tV-vVw" secondAttribute="bottom" constant="100" id="yA2-Uy-xp7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CU0-tV-vVw" secondAttribute="trailing" constant="20" id="yxu-I5-yBO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="qrCodeButton" destination="CU0-tV-vVw" id="j1r-RG-fmf"/>
+                        <outlet property="qrCodeImageView" destination="bdJ-uC-0t9" id="lHh-kn-XZB"/>
+                        <outlet property="qrCodeTextField" destination="IwR-Sl-rgo" id="lvc-ED-55b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
