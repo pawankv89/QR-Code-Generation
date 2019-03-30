@@ -59,9 +59,9 @@ let qrCodeImage: UIImage = UIImage.init(ciImage: qrImage!)
 return qrCodeImage
 }
 ```
-## For Refrences
+## For References
 
-[](https://developer.apple.com/library/archive/documentation/GraphicsImaging/Reference/CoreImageFilterReference/index.html#//apple_ref/doc/filter/ci/CIQRCodeGenerator)
+https://developer.apple.com/library/archive/documentation/GraphicsImaging/Reference/CoreImageFilterReference/index.html#//apple_ref/doc/filter/ci/CIQRCodeGenerator
 
 ## License
 
